@@ -11,10 +11,11 @@ import {
 
 export default function FullNameCapture() {
   const { state } = useLeadContext()
-  const { changeValue, addError } = useLeadFormUtils()
+  const { changeValue, addError, nextStep } = useLeadFormUtils()
   const validateAndMove = () => {
     if (!state.firstName) return addError('firstName', 'first name is required')
     if (!state.lastName) return addError('lastName', 'last name is required')
+    nextStep()
   }
   return (
     <Wrapper>

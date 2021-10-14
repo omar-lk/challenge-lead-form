@@ -1,6 +1,12 @@
+import ZipCode from '../pages/zipcode'
 import FullNameCapture from '../pages/full-name'
 import WelcomePage from '../pages/welcome'
-import { addNewError, moveBackStep, moveNextStep, valueChanged } from '../state/actions'
+import {
+  addNewError,
+  moveBackStep,
+  moveNextStep,
+  valueChanged
+} from '../state/actions'
 import { useLeadContext } from '../state/context'
 
 export const useLeadFormUtils = () => {
@@ -15,6 +21,8 @@ export const useLeadFormUtils = () => {
         return <WelcomePage />
       case 1:
         return <FullNameCapture />
+      case 2:
+        return <ZipCode />
       default:
     }
   }
