@@ -8,6 +8,7 @@ import {
   valueChanged
 } from '../state/actions'
 import { useLeadContext } from '../state/context'
+import Adresse from '../pages/adresse'
 
 export const useLeadFormUtils = () => {
   const {
@@ -23,6 +24,8 @@ export const useLeadFormUtils = () => {
         return <FullNameCapture />
       case 2:
         return <ZipCode />
+        case 3:
+          return <Adresse/>
       default:
     }
   }
